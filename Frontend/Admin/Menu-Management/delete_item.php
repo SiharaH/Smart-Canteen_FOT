@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 // Database connection
-$conn = new mysqli("localhost", "root", "", "canteen_db");
+$conn = new mysqli("localhost", "root", "1234", "canteen");
 
 if ($conn->connect_error) {
     echo json_encode(["success" => false, "error" => $conn->connect_error]);

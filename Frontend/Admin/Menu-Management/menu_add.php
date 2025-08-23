@@ -1,7 +1,7 @@
 <?php
 session_start();
 // Database connection
-$conn = mysqli_connect("localhost", "root", "", "canteen_db");
+$conn = mysqli_connect("localhost", "root", "1234", "canteen");
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
