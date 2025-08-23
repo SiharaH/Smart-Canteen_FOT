@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "1234", "canteen");
+$mysqli = new mysqli("localhost", "root", "801@Vihanga", "smart_canteen");
 if ($mysqli->connect_error) die("Connection failed: " . $mysqli->connect_error);
 
 // Order counts by status
