@@ -10,6 +10,8 @@ foreach ($statuses as $status) {
     $order_counts[$status] = $res->fetch_assoc()['count'];
 }
 
+
+
 // Total orders
 $res_total = $mysqli->query("SELECT COUNT(*) as count FROM orders");
 $total_orders = $res_total->fetch_assoc()['count'];
@@ -72,13 +74,18 @@ body.dark .toast { background:#3498db; color:#fff;}
         <a href="index.php" class="brand">🍴 Canteen Admin</a>
         <span class="menu-toggle">☰</span>
     </div>
-    <div class="navbar-center">
-        <a href="index.php" class="nav-link active">Dashboard</a>
-        <a href="orders.php" class="nav-link">Orders</a>
-        <a href="inventory.php" class="nav-link">Inventory</a>
-        <a href="sales.php" class="nav-link">Payments</a>
-        <a href="activity_logs.php" class="nav-link">Activity Logs</a>
-    </div>
+    <nav class="navbar">
+  <ul>
+    <li><a href="index.php">Dashboard</a></li>
+    <li><a href="orders.php">Orders</a></li>
+    <li><a href="inventory.php">Inventory</a></li>
+    <li><a href="sales.php">Payments</a></li>
+    <li><a href="Menu-Management/menu_add.php">Menu</a></li>
+    <li><a href="activity_logs.php">Activity Logs</a></li>
+    <li><a href="logout.php">Logout</a></li>
+  </ul>
+</nav>
+
     <div class="navbar-right">
         <button id="theme-toggle">🌙 Dark Mode</button>
         <a href="logout.php" class="nav-link logout">Logout</a>
